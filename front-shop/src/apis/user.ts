@@ -1,0 +1,282 @@
+import { defRequest } from '@/utils/http/request';
+
+/**
+ *获取验证码 
+ */
+export function umsGetAuthCode(data?:Recordable){
+  return defRequest({
+    url: '/sso/getAuthCode',
+    method: 'get',
+    params: data
+  })
+}
+/**
+ *会员登录
+ */
+export function umsLogin(data?:Recordable){
+  return defRequest({
+    url: '/sso/login',
+    method: 'post',
+    data
+  })
+}
+/**
+ *会员登出
+ */
+
+export function umsLoginOut(){
+  return defRequest({
+    url: '/sso/logout',
+    method: 'post',
+  })
+}
+
+/**
+ *会员注册
+ */
+export function umsRegister(data?:Recordable){
+  return defRequest({
+    url: '/sso/register',
+    method: 'post',
+    data
+  })
+}
+
+/**
+ *重置密码
+ */
+ export function umsResetPwd(data?:Recordable){
+  return defRequest({
+    url: '/sso/updatePassword',
+    method: 'post',
+    data
+  })
+}
+
+/**
+ *获取用户信息
+ */
+ export function umsUserInfo(data?:Recordable){
+  return defRequest({
+    url: '/sso/info',
+    method: 'get',
+    params: data
+  })
+}
+
+/**
+ * 查看用户资产
+ */
+export function userAmount(data?: Recordable) {
+  return defRequest({
+    url: `/user/amount`,
+    method: 'get',
+    params: data,
+  });
+}
+
+/**
+ * 资金流水
+ */
+export function userCashLog(data?: Recordable) {
+  return defRequest({
+    url: `/user/cashLog/v2`,
+    method: 'post',
+    data,
+  });
+}
+
+/**
+ * 查看用户详情
+ */
+export function userDetail(data?: Recordable) {
+  return defRequest({
+    url: `/user/detail`,
+    method: 'get',
+    params: data,
+  });
+}
+
+/**
+ * 修改用户信息
+ */
+export function userModify(data?: Recordable) {
+  return defRequest({
+    url: `/user/modify`,
+    method: 'get',
+    params: data,
+  });
+}
+
+/**
+ * 退出登录
+ */
+export function userLoginOut(data?: Recordable) {
+  return defRequest({
+    url: `/user/loginout`,
+    method: 'get',
+    params: data,
+  });
+}
+
+/**
+ * 绑定手机号码
+ */
+export function userMBindMobile(data?: Recordable) {
+  return defRequest({
+    url: `/user/m/bind-mobile`,
+    method: 'post',
+    data,
+  });
+}
+
+/**
+ * 用户登录[手机号码]
+ */
+export function userMLogin(data?: Recordable) {
+  return defRequest({
+    url: `/user/m/login`,
+    method: 'post',
+    data,
+  });
+}
+
+/**
+ * 使用手机号码和验证码登录
+ */
+export function userMLoginMobile(data?: Recordable) {
+  return defRequest({
+    url: `/user/m/loginMobile`,
+    method: 'post',
+    data,
+  });
+}
+
+/**
+ * 用户注册[手机号]
+ */
+export function userMRegister(data?: Recordable) {
+  return defRequest({
+    url: `/user/m/register`,
+    method: 'post',
+    data,
+  });
+}
+
+/**
+ * 重设登陆密码
+ */
+export function userMResetPwd(data?: Recordable) {
+  return defRequest({
+    url: `/user/m/reset-pwd`,
+    method: 'post',
+    data,
+  });
+}
+
+/**
+ * 修改登陆密码
+ */
+export function userModifyPwd(data?: Recordable) {
+  return defRequest({
+    url: `/user/modify/password`,
+    method: 'post',
+    data,
+  });
+}
+
+/**
+ * 添加收货地址
+ */
+export function userShoppingAddressAdd(data?: Recordable) {
+  return defRequest({
+    url: `/user/shipping-address/add`,
+    method: 'post',
+    data,
+  });
+}
+
+/**
+ * 获取默认收货地址
+ */
+export function userShoppingAddressDefault(data?: Recordable) {
+  return defRequest({
+    url: `/user/shipping-address/default/v2`,
+    method: 'get',
+    params: data,
+  });
+}
+
+/**
+ * 删除收货地址
+ */
+export function userShoppingAddressDelete(data?: Recordable) {
+  return defRequest({
+    url: `/user/shipping-address/delete`,
+    method: 'post',
+    data,
+  });
+}
+
+/**
+ * 收货地址详情
+ */
+export function userShoppingAddressDetail(data?: Recordable) {
+  return defRequest({
+    url: `/user/shipping-address/detail/v2`,
+    method: 'get',
+    params: data,
+  });
+}
+
+/**
+ * 收货地址列表
+ */
+export function userShoppingAddressList(data?: Recordable) {
+  return defRequest({
+    url: `/user/shipping-address/list/v2`,
+    method: 'post',
+    data,
+  });
+}
+
+/**
+ * 修改收货地址
+ */
+export function userShoppingAddressUpdate(data?: Recordable) {
+  return defRequest({
+    url: `/user/shipping-address/update`,
+    method: 'post',
+    data,
+  });
+}
+
+export default {
+  userAmount,
+  userCashLog,
+  userDetail,
+  userModify,
+  // 登录/注册
+  userLoginOut,
+  userMBindMobile,
+  userMLogin,
+  userMLoginMobile,
+  userMRegister,
+  userMResetPwd,
+  userModifyPwd,
+  // 收货地址
+  userShoppingAddressAdd,
+  userShoppingAddressDefault,
+  userShoppingAddressDelete,
+  userShoppingAddressDetail,
+  userShoppingAddressList,
+  userShoppingAddressUpdate,
+
+  // ums
+  umsGetAuthCode,
+  umsLogin,
+  umsLoginOut,
+  umsRegister,
+  umsResetPwd,
+  umsUserInfo
+};
