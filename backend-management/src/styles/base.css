@@ -1,0 +1,38 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+.batch-operate-container {
+  display: inline-block;
+  margin-top: 20px;
+}
+.pagination-container {
+  display: inline-block;
+  float: right;
+  margin-top: 20px;
+}
+.search {
+  line-height: 20px;
+  height: 20px;
+}
+.search::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+.search .search-left-header {
+  float: left;
+}
+.search .search-left-header * {
+  vertical-align: middle;
+  margin-right: 2px;
+}
+.search .search-right-header {
+  float: right;
+}
+.el-card {
+  margin-bottom: 2px;
+  padding-bottom: 5px;
+}

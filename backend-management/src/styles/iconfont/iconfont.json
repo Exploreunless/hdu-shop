@@ -1,0 +1,23 @@
+{
+  "id": "3315620",
+  "name": "mall",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "577313",
+      "name": "加号1",
+      "font_class": "jiahao1",
+      "unicode": "e727",
+      "unicode_decimal": 59175
+    },
+    {
+      "icon_id": "5387869",
+      "name": "减号_o",
+      "font_class": "jianhao_o",
+      "unicode": "eb79",
+      "unicode_decimal": 60281
+    }
+  ]
+}
